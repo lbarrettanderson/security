@@ -12,8 +12,8 @@ As of yet no videos will be automatically deleted. Must do it manually.
 
 Sample apache conf entry:
 
-  Alias /security /home/barrett/security
-  <Directory /home/barrett/security>
+  Alias /security /home/USER/security
+  <Directory /home/USER/security>
          Require all granted
  	        Options None
  		</Directory>
