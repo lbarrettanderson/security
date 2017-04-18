@@ -1,11 +1,5 @@
 #!/usr/bin/perl
 
-# Sample crontab (`crontab -e`)
-# */15 * * * * /home/USER/security/cam.pl cam1 192.168.1.235 0 rtspusername rtsppassword
-# 5-59/15 * * * * /home/USER/security/cam.pl cam2 192.168.1.239 300 rtspusername rtsppassword
-# The second entry will offset the feed for that camera by 5 minutes. The '300' (seconds) argument *must* match this offset.
-# As of yet no videos will be automatically deleted. Must do it manually.
-
 # Name of camera.
 $cam = $ARGV[0];
 
