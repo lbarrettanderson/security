@@ -1,7 +1,10 @@
 
 Requires ffmpeg, apache2, php, and likely others.
 
-Does *not* currently require login for the web interface. Keep that in mind if you put this on a publicly accessible server.
+WARNINGS:
+ - Does *not* currently require login for the web interface. Keep that in mind if you put this on a publicly accessible server.
+ - The PHP is highly insecure (uses unsanitized GET parameters).
+ - Will *not* automatically delete old videos.
 
 Sample crontab (`crontab -e`):
 
