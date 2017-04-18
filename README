@@ -1,6 +1,8 @@
 
 Requires ffmpeg, apache2, php, and likely others.
 
+Does *not* currently require login for the web interface. Keep that in mind if you put this on a publicly accessible server.
+
 Sample crontab (`crontab -e`):
 
   */15 * * * * /home/USER/security/cam.pl cam1 192.168.1.235 0 rtspusername rtsppassword
