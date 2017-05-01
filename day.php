@@ -24,7 +24,7 @@ function mouseover(id) {
 	 if (showingVid[id]) return;
 	 //console.log("passed");
 	 showingVid[id] = 1;
-	 document.getElementById('a_'+id).innerHTML = '<video controls autoplay height="180" width="320"><source src="<?=$urltotheday."/" ?>'+ id +'_100x.mp4" type="video/mp4">SADNESS</video><br>' + id;
+	 document.getElementById('a_'+id).innerHTML = '<video autoplay height="180" width="320"><source src="<?=$urltotheday."/" ?>'+ id +'_100x.mp4" type="video/mp4">SADNESS</video><br>' + id;
 }
 
 function mouseout(id) {
