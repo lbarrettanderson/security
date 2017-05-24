@@ -51,11 +51,13 @@ foreach ($times as $time) {
     if ($time == "." || $time == ".." || !$isMp4) {
            continue;
     }
+    $vidUrl = "vid.php?day=".$day."&cam=".$camera."&year=".$year."&month=".$month."&time=".$matches[1];
 ?>
 <div id="t_<?=$matches[1] ?>" style="display:inline-block;width:320px;margin-bottom:25px;margin-right:10px;" onmouseenter="mouseover('<?=$matches[1] ?>');" onmouseleave="mouseout('<?=$matches[1] ?>');">
 
 
-<a id="a_<?=$matches[1] ?>" href="<?=$urltotheday."/".$time  ?>"><img width="320" height="180" src="<?=$urltotheday."/".$matches[1]."_th.jpg" ?>" /><br><?=$matches[1] ?>
+<!--<a id="a_<?=$matches[1] ?>" href="<?=$urltotheday."/".$time  ?>"><img width="320" height="180" src="<?=$urltotheday."/".$matches[1]."_th.jpg" ?>" /><br><?=$matches[1] ?> -->
+<a id="a_<?=$matches[1] ?>" href="<?=$vidUrl ?>"><img width="320" height="180" src="<?=$urltotheday."/".$matches[1]."_th.jpg" ?>" /><br><?=$matches[1] ?>
 </a>
 
 
