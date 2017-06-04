@@ -21,11 +21,11 @@ $offset = ($starttime - $delay) % (20*60);
 $recordtime = 20*60 - $offset - 2;
 
 my ($sec,$min,$hour,$mday,$mon,$year,$wday,$yday,$isdst) = localtime(time);
-my @abbr = qw(Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec);
+#my @abbr = qw(Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec);
 
 # My ramdisk is mounted inside the security folder. A ramdisk is optional.
-$filename = "~/security/ramdisk/".$cam."/".($year + 1900)."/".$abbr[$mon]."/".sprintf("%02d", $mday)."/";
-$finallocation = "~/security/".$cam."/".($year + 1900)."/".$abbr[$mon]."/".sprintf("%02d", $mday)."/";
+$filename = "~/security/ramdisk/".$cam."/".($year + 1900)."/".sprintf("%02d", $mon + 1)."/".sprintf("%02d", $mday)."/";
+$finallocation = "~/security/".$cam."/".($year + 1900)."/".sprintf("%02d", $mon + 1)."/".sprintf("%02d", $mday)."/";
 
 # Clear empty directories (this could go at the end)
 $cmd = "find ~/security/ramdisk/".$cam." -type d -empty -delete";
