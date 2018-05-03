@@ -1,13 +1,13 @@
-<?
+<?php
 
-$cameras = ["cam1","cam2","cam3","cam4"];
+$cameras = ["cam1","cam2","cam3","cam4","cam5"];
 
 $weekdays = array("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday");
 $monthNames = array("", "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec");
 
 
 foreach ($cameras as $camera) {
-	echo "<br><br>".$camera."<br>";
+	echo "<br><br><a href='live.php?cam=".$camera."'>".$camera."</a><br>";
 	for ($i = 0; $i < 7; $i++) {
  	   echo "<div style=\"display:inline-block;width:150px;border:1px solid black;padding:5px;background-color:#CCC;\">".$weekdays[$i]."</div>";
 	}

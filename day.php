@@ -1,4 +1,4 @@
-<?
+<?php
 
 $camera = $_GET['cam'];
 $year = $_GET['year'];
@@ -41,13 +41,13 @@ function mouseout(id) {
 
 </head>
 <body>
-<?
+<?php
 
 
 
 $times = scandir($camera."/".$year."/".$month."/".$day);
 foreach ($times as $time) {
-    $isMp4 = preg_match('/(\d\d\d\d).mp4/', $time, $matches);
+    $isMp4 = preg_match('/^(\d\d\d\d).mp4/', $time, $matches);
     if ($time == "." || $time == ".." || !$isMp4) {
            continue;
     }
@@ -62,7 +62,7 @@ foreach ($times as $time) {
 
 
 </div>
-<?
+<?php
 
 
 }

@@ -6,11 +6,11 @@ $month = $_GET['month'];
 $day = $_GET['day'];
 $time = $_GET['time'];
 
-$urltothetime = $camera."/".$year."/".$month."/".$day."/".$time.".mp4";
+$urltothetime = $camera."/".$year."/".$month."/".$day."/".$time.".mpg";
 
 
 ?>
-<html><head><meta name="viewport" content="width=device-width"></head><body style="margin: 0px;"><video controls="" autoplay="" name="media" id="vid"><source src="<?=$urltothetime ?>" type="video/mp4"></video>
+<html><head><meta name="viewport" content="width=device-width"></head><body style="margin: 0px;"><video controls="" autoplay="" name="media" id="vid"><source src="<?=$urltothetime ?>" type="video/mpeg"></video>
 
 <br><br>
 

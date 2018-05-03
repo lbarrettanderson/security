@@ -12,4 +12,9 @@ for ($i = $days + 10 ; $i > $days ; $i--) {
     $cmd = "rm -rf ".$location;
     #print "$cmd\n";
     `$cmd`;
+
+    $camlocation = "~/security/".$cam;
+    $cmd = "find $camlocation -type d -empty -delete";
+    `$cmd`;
+    
 }
