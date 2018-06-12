@@ -1,7 +1,9 @@
 <?php
 
-$camera = $_GET['cam'];
+$cameraname = $_GET['cam'];
 $action = $_GET['a'];
+$camera = "ramdisk/".$cameraname;
+
 
         $years = scandir($camera);
         $lastday = -1;
@@ -50,7 +52,7 @@ var vidChanged = 0;
 function getNext() {
 
 var xhr = new XMLHttpRequest();
-xhr.open('get', 'live.php?cam=<?=$camera ?>&a=last');
+xhr.open('get', 'live.php?cam=<?=$cameraname ?>&a=last');
 
 xhr.onreadystatechange = function () {
     var DONE = 4;
