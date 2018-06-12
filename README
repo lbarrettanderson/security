@@ -4,16 +4,12 @@ Requires ffmpeg, apache2, php, and likely others.
 WARNINGS:
  - Does *not* currently require login for the web interface. Keep that in mind if you put this on a publicly accessible server.
  - The PHP is highly insecure (uses unsanitized GET parameters).
- - Will *not* automatically delete old videos.
 
 Sample crontab (`crontab -e`):
 
-  */15 * * * * /home/USER/security/cam.pl cam1 192.168.1.235 0 rtspusername rtsppassword
-  5-59/15 * * * * /home/USER/security/cam.pl cam2 192.168.1.239 300 rtspusername rtsppassword
+*/20 * * * * /home/USER/security/cam2.pl cam1 192.168.1.36 0 rtpuser rtppassword stream0
 
-The second entry will offset the feed for that camera by 5 minutes. The '300' (seconds) argument *must* match this offset.
-As of yet no videos will be automatically deleted. Must do it manually.
-
+The last entry is the stream name. 11 is another common one.
 
 Sample apache conf entry:
 
@@ -26,4 +22,4 @@ Sample apache conf entry:
 
 Sample fstab entry for ramdisk
 
-  tmpfs /home/USER/security/ramdisk tmpfs rw,relatime,size=4G 0 0
+  tmpfs /home/USER/ramdisk tmpfs rw,relatime,size=4G 0 0
